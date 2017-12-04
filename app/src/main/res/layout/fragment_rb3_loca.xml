@@ -1,0 +1,204 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.MajorBasicProject2.Business3LocaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="100dp"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="73dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:ems="10"
+                android:enabled="false"
+                android:text="사업장이 어디에 있나요?"
+                android:textSize="30dp" />
+
+            <TextView
+                android:text="국가"
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="30dp"
+                />
+            <EditText
+                android:text="대한민국"
+                android:id="@+id/etCountry"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="28dp"
+                android:ems="10"
+                android:enabled="false"
+                android:focusable="false"
+                android:inputType="textPersonName"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="30dp"
+                />
+            <TextView
+                android:text="시/도"
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="30dp"
+                />
+            <EditText
+                android:hint="예) 서울특별시"
+                android:id="@+id/etProvince"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="0dp"
+                android:textSize="18sp"
+                android:layout_marginEnd="30dp"
+                />
+            <TextView
+                android:text="시/군/구"
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="30dp"
+                />
+            <EditText
+                android:hint="예) 중구"
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="0dp"
+                android:textSize="18sp"
+                android:layout_marginEnd="30dp"
+                />
+            <TextView
+                android:text="동/읍/면"
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="30dp"
+                />
+            <EditText
+                android:id="@+id/etTown"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="0dp"
+                android:hint="예) 명동"
+                android:textSize="18sp"
+                android:layout_marginEnd="30dp"
+                />
+            <TextView
+                android:text="도로명 주소"
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:textSize="16sp"
+                android:layout_marginEnd="30dp"/>
+
+            <EditText
+                android:id="@+id/etRoad"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="0dp"
+                android:hint="예) 명동길 74 103-201"
+                android:textSize="18sp"
+                android:layout_marginEnd="30dp"
+                />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="8dp"
+                android:text="우편번호"
+                android:textSize="16sp"
+                android:layout_marginEnd="30dp"
+                />
+
+            <EditText
+                android:id="@+id/etPostcode"
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="0dp"
+                android:hint="예) 135-919"
+                android:textSize="18sp"
+                android:layout_marginEnd="30dp"
+                />
+
+            <Button
+                android:id="@+id/btnAddAddress"
+                android:text="위 주소를 주소록에 추가"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="40dp"
+                android:text="내 주소 목록에서 불러오기"
+                android:textSize="16sp"
+                android:layout_marginEnd="30dp"
+                />
+
+            <ListView
+                android:id="@+id/lvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="35dp"
+                android:layout_marginStart="33dp"
+                android:layout_marginTop="8dp">
+
+            </ListView>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:layout_marginRight="30dp"
+                android:text="다음 >" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</FrameLayout>

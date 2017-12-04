@@ -1,0 +1,237 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.MajorBasicProject2.Business5EnviFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="80dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="284dp"
+                android:layout_height="73dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:ems="10"
+                android:enabled="false"
+                android:text="회원님의 의뢰 환경에 대해 설명해 주세요 "
+                android:textSize="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="32dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="15dp"
+                android:text="X"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnPref"
+                android:layout_width="32dp"
+                android:layout_height="36dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginTop="15dp"
+                android:text="＜"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="28dp"
+                android:text="작업 공간 유형"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <NumberPicker
+                android:id="@+id/numberPicker"
+                android:layout_width="320dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="10dp"
+                android:descendantFocusability="blocksDescendants"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="30dp"
+                android:text="접근성"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numberPicker" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="교통편 제공"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/editText2"
+                app:layout_constraintRight_toRightOf="@+id/editText1"
+                tools:layout_editor_absoluteX="291dp"
+                tools:layout_editor_absoluteY="124dp" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="인근 지하철"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText1" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/editText3"
+                app:layout_constraintRight_toRightOf="@+id/editText2" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="인근 버스정류장"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/editText4"
+                app:layout_constraintRight_toRightOf="@+id/editText3" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="건물 내 무료주차"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+            <Switch
+                android:id="@+id/switch4"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText4"
+                app:layout_constraintRight_toRightOf="@+id/editText4" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="30dp"
+                android:text="작업장 안전"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="사내 경비"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <Switch
+                android:id="@+id/switch5"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText5"
+                app:layout_constraintRight_toRightOf="@+id/editText5" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="소화기"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+            <Switch
+                android:id="@+id/switch6"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText6"
+                app:layout_constraintRight_toRightOf="@+id/editText6" />
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>

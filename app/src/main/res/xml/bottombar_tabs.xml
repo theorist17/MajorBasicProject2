@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <tabs>
+        <tab id="@+id/tab_search"
+            icon="@drawable/ic_search"
+            title="search"
+            barColorWhenSelected="@color/sanga1"
+            />
+        <tab id="@+id/tab_task"
+            icon="@drawable/ic_assignment"
+            title="task"
+            barColorWhenSelected="@color/sanga2"
+            />
+        <tab id="@+id/tab_contract"
+            icon="@drawable/ic_today"
+            title="contract"
+            barColorWhenSelected="@color/sanga3"
+            />
+        <tab id="@+id/tab_history"
+            icon="@drawable/ic_chat"
+            title="history"
+            barColorWhenSelected="@color/sanga4"
+            />
+        <tab id="@+id/tab_profile"
+            icon="@drawable/ic_person"
+            title="profile"
+            barColorWhenSelected="@color/sanga5"
+            />
+    </tabs>
+</PreferenceScreen>

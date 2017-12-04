@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#008E5F</color>
+    <color name="link">#008e5f</color>
+    <color name="highlight">#FF361C</color>
+    <color name="sanga">#E2DFDE</color>
+    <color name="sanga1">#F2DFDE</color>
+    <color name="sanga2">#E2EFDE</color>
+    <color name="sanga3">#E2FFDE</color>
+    <color name="sanga4">#E2EFEE</color>
+    <color name="sanga5">#E2DFFE</color>
+    <color name="red">#FF361C</color>
+    <color name="orange">#FF4500</color>
+    <color name="yellow">#FFA900</color>
+    <color name="green">#008E3E</color>
+    <color name="blue">#003D97</color>
+    <color name="hwagang">@android:color/darker_gray</color>
+</resources>

@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.MajorBasicProject2.MainSearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:text="LIST"
+                android:id="@+id/btnList"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"/>
+            <EditText
+                android:id="@+id/etFind"
+                android:layout_width="244dp"
+                android:layout_height="58dp"
+                android:hint="검색할 항목을 입력해주세요."
+                android:layout_weight="1"/>
+
+            <Button
+                android:text="FIND"
+                android:id="@+id/btnFind"
+                android:layout_width="58dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+
+
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:layout_weight="1"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            >
+            <TextView
+                android:id="@+id/tvGps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="26dp"
+                android:layout_marginTop="19dp"
+                android:text="Current Location Information"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/map"
+                android:textColor="#000000"
+                android:layout_marginStart="26dp" />
+        </com.google.android.gms.maps.MapView>
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="150dp"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

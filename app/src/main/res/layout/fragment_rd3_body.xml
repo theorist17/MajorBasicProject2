@@ -1,0 +1,69 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="org.androidtown.MajorBasicProject2.Quest3BodyFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="80dp"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="284dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:ems="10"
+                android:enabled="false"
+                android:text="회원님의 의뢰을 설명하세요"
+                android:textColor="@color/bb_darkBackgroundColor"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="28dp"
+                android:layout_marginTop="16dp"
+                android:paddingRight="10dp"
+                android:text="의뢰내용 설명하기"
+                android:textColor="@color/bb_darkBackgroundColor"
+                android:textSize="20sp"/>
+
+            <EditText
+                android:id="@+id/etBody"
+                android:layout_width="match_parent"
+                android:layout_height="394dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_box"
+                android:ems="10"
+                android:hint="의뢰의 배경이 되는 현재 환경, 의뢰 목적, \n업무 분위기 등등 다양한 내용을 적어보세요\n모집조건에 대해서는 쓰지 않으셔도 됩니다."
+                android:maxLength="40"
+                android:padding="10dp"
+                android:textColor="@color/bb_darkBackgroundColor"
+                android:textColorHint="#777777"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</FrameLayout>

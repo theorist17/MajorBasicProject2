@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <external-path name="hidden" path="/Pictures/gyeom"/>
+    <!--xml에 기록한 name은 임시값, path가 실제값 실제 파일이 생성된 경로를 의미하는 것은 gyeom
+    external-path represents files in the root of the external storage area.
+    The root path of this subdirectory is the same as the value returned by Environment.getExternalStorargeDirectory()-->
+</paths>

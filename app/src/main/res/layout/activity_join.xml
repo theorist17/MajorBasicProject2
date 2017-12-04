@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.MajorBasicProject2.LoginJoinActivity">
+
+    <EditText
+        android:id="@+id/etId"
+        android:layout_width="206dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="74dp"
+        android:hint="ID"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etPw"
+        android:layout_width="203dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:inputType="textPassword"
+        android:hint="PASSWORD"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etId"
+        />
+
+    <EditText
+        android:id="@+id/etPwChk"
+        android:layout_width="203dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:hint="PASSWORD CHECK"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPw" />
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="203dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="16dp"
+        android:hint="EMAIL"
+        android:inputType="textEmailAddress"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPwChk" />
+
+    <Button
+        android:id="@+id/btnJoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="JOIN"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etEmail" />
+
+</android.support.constraint.ConstraintLayout>

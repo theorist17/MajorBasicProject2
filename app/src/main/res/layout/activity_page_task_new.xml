@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="org.androidtown.MajorBasicProject2.PageTaskActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tvPageTaskHeader"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_weight="0.10"
+            android:background="@null"
+            android:text="작업정보"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textSize="30dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:text="참조회수"
+                android:textColor="@color/bb_darkBackgroundColor"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvPageTaskCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:text="참조회수"
+                android:textColor="@color/link"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/common_google_signin_btn_text_light_disabled" />
+
+        <TextView
+            android:id="@+id/tvPageTaskTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text="이름"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etPageTaskTitle"
+            style="@style/ClearEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/bb_darkBackgroundColor"
+            android:hint="작업의 제목을 입력하세요"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textColorHint="@color/bb_darkBackgroundColor"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/common_google_signin_btn_text_light_disabled" />
+
+        <TextView
+            android:id="@+id/tvPageTaskSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text="한 줄 요약"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etPageTaskSummary"
+            style="@style/ClearEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/bb_darkBackgroundColor"
+            android:hint="작업에 대한 간단한 개요를 입력하세요"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textColorHint="@color/bb_darkBackgroundColor"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view9"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/common_google_signin_btn_text_light_disabled" />
+
+        <TextView
+            android:id="@+id/tvPageTaskBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text="작업 상세"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etPageTaskBody"
+            style="@style/ClearEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="@color/bb_darkBackgroundColor"
+            android:hint="작업에 대한 상세정보를 입력하세요"
+            android:maxLines="5"
+            android:minHeight="100dp"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textColorHint="@color/bb_darkBackgroundColor"
+            android:textSize="16sp" />
+
+        <View
+            android:id="@+id/view10"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/common_google_signin_btn_text_light_disabled" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:text="태그"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textSize="18sp" />
+
+        <ListView
+            android:id="@+id/lvTag"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp">
+
+
+        </ListView>
+        <View
+            android:id="@+id/view11"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.10"
+            android:background="@color/common_google_signin_btn_text_light_disabled" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.10"
+            android:text="태그 달기"
+            android:textColor="@color/bb_darkBackgroundColor"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etPageTaskValue"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:hint="평점"
+                android:textColor="@color/link"
+                android:textColorHint="@color/link"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/etPageTaskTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="태그 내용"
+                android:textColor="@color/hwagang"
+                android:textColorHint="@color/bb_darkBackgroundColor"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnPageTaskTagger"
+                style="@style/ClearButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="right"
+                android:text="추가"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view12"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="0.10"
+            android:background="@color/common_google_signin_btn_text_light_disabled" />
+
+        <Button
+            android:id="@+id/btnPageTaskRegister"
+            style="@style/ClearButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right"
+            android:background="@color/link"
+            android:text="확인"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+
+</ScrollView>
+

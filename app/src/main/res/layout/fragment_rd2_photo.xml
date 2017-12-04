@@ -1,0 +1,107 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context="org.androidtown.MajorBasicProject2.Quest2PhotoFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="80dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="284dp"
+                android:layout_height="73dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="63dp"
+                android:background="@null"
+                android:ems="10"
+                android:enabled="false"
+                android:text="사진을 추가할 준비가 되셨나요?"
+                android:textColor="@color/bb_darkBackgroundColor"
+                android:textSize="30dp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginStart="28dp" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="74dp"
+                android:paddingRight="10dp"
+                android:text="지원자는 사진을 보며 의뢰의 내용을\n예상하기 때문에, 사진은 정말 중요해요.\n지금 시간을 내어 의뢰 사진을\n찍으시겠어요? "
+                android:textColor="@color/bb_darkBackgroundColor"
+                android:textSize="16sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                android:layout_marginStart="28dp" />
+
+            <Button
+                android:id="@+id/btnAddPhoto"
+                android:layout_width="150dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="22dp"
+                android:text="사진 추가하기"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1"
+                android:layout_marginStart="28dp" />
+
+            <Button
+                android:id="@+id/btnSkipPhoto"
+                android:layout_width="110dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="28dp"
+                android:text="넘어가기"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnAddPhoto"
+                android:layout_marginStart="28dp" />
+
+
+
+            <GridView
+                android:id="@+id/glImageGrid"
+                android:layout_gravity="center"
+                android:numColumns="auto_fit"
+                android:columnWidth="80dp"
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnSkipPhoto">
+
+            </GridView>
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>

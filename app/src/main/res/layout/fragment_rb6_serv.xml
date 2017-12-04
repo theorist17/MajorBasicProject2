@@ -1,0 +1,483 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="org.androidtown.MajorBasicProject2.Business6ServFragment">
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="80dp"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="284dp"
+                android:layout_height="73dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@null"
+                android:ems="10"
+                android:enabled="false"
+                android:text="지원자에게 제공할 사항을 설명해주세요"
+                android:textSize="30dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="32dp"
+                android:text="지원자가 이용할 수 있는 편의시설"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="좌식 화장실"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView1" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/editText2"
+                app:layout_constraintRight_toRightOf="@+id/editText1"
+                tools:layout_editor_absoluteX="291dp"
+                tools:layout_editor_absoluteY="124dp" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="에어컨"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText1" />
+
+            <Switch
+                android:id="@+id/switch2"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/editText3"
+                app:layout_constraintRight_toRightOf="@+id/editText2" />
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="난방"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText2" />
+
+            <Switch
+                android:id="@+id/switch3"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toTopOf="@+id/editText4"
+                app:layout_constraintRight_toRightOf="@+id/editText3" />
+
+            <EditText
+                android:id="@+id/editText4"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="책상/작업공간"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+            <Switch
+                android:id="@+id/switch4"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText4"
+                app:layout_constraintRight_toRightOf="@+id/editText4" />
+
+            <EditText
+                android:id="@+id/editText5"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="무선 인터넷"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText4" />
+
+            <Switch
+                android:id="@+id/switch5"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText5"
+                app:layout_constraintRight_toRightOf="@+id/editText5" />
+
+            <EditText
+                android:id="@+id/editText6"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="개인 로커"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText5" />
+
+            <Switch
+                android:id="@+id/switch6"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText6"
+                app:layout_constraintRight_toRightOf="@+id/editText6" />
+
+            <EditText
+                android:id="@+id/editText7"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="노트북"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText6" />
+
+            <Switch
+                android:id="@+id/switch7"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText7"
+                app:layout_constraintRight_toRightOf="@+id/editText7" />
+
+            <EditText
+                android:id="@+id/editText8"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="휠체어 접근 가능"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+            <Switch
+                android:id="@+id/switch8"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText8"
+                app:layout_constraintRight_toRightOf="@+id/editText8" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="28dp"
+                android:layout_marginTop="32dp"
+                android:text="지원자를 위한 복지"
+                android:textSize="20sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText8" />
+
+            <EditText
+                android:id="@+id/editText9"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="10dp"
+                android:focusable="false"
+                android:text="조식 제공"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <Switch
+                android:id="@+id/switch9"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText9"
+                app:layout_constraintRight_toRightOf="@+id/editText9" />
+
+            <EditText
+                android:id="@+id/editText10"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="중식 제공"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText9" />
+
+            <Switch
+                android:id="@+id/switch10"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText10"
+                app:layout_constraintRight_toRightOf="@+id/editText10" />
+
+            <EditText
+                android:id="@+id/editText11"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="석식 제공"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText10" />
+
+            <Switch
+                android:id="@+id/switch11"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText11"
+                app:layout_constraintRight_toRightOf="@+id/editText11" />
+
+            <EditText
+                android:id="@+id/editText12"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="숙소 제공"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText11" />
+
+            <Switch
+                android:id="@+id/switch12"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText12"
+                app:layout_constraintRight_toRightOf="@+id/editText12" />
+
+            <EditText
+                android:id="@+id/editText13"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="근무복"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText12" />
+
+            <Switch
+                android:id="@+id/switch13"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText13"
+                app:layout_constraintRight_toRightOf="@+id/editText13" />
+
+            <EditText
+                android:id="@+id/editText14"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="탈의실"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText13" />
+
+            <Switch
+                android:id="@+id/switch14"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText14"
+                app:layout_constraintRight_toRightOf="@+id/editText14" />
+
+            <EditText
+                android:id="@+id/editText15"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="샤워 시설"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText14" />
+
+            <Switch
+                android:id="@+id/switch15"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText15"
+                app:layout_constraintRight_toRightOf="@+id/editText15" />
+
+            <EditText
+                android:id="@+id/editText16"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="세탁"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText15" />
+
+            <Switch
+                android:id="@+id/switch16"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText16"
+                app:layout_constraintRight_toRightOf="@+id/editText16" />
+
+            <EditText
+                android:id="@+id/editText17"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="빨래 건조기"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText16" />
+
+            <Switch
+                android:id="@+id/switch17"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText17"
+                app:layout_constraintRight_toRightOf="@+id/editText17" />
+
+            <EditText
+                android:id="@+id/editText18"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="헬스장"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText17" />
+
+            <Switch
+                android:id="@+id/switch18"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText18"
+                app:layout_constraintRight_toRightOf="@+id/editText18" />
+
+            <EditText
+                android:id="@+id/editText19"
+                android:layout_width="315dp"
+                android:layout_height="61dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="0dp"
+                android:focusable="false"
+                android:text="초기 임산부/수유지원"
+                android:textSize="18sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editText18" />
+
+            <Switch
+                android:id="@+id/switch19"
+                android:layout_width="51dp"
+                android:layout_height="45dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginRight="8dp"
+                android:text=""
+                app:layout_constraintBottom_toBottomOf="@+id/editText19"
+                app:layout_constraintRight_toRightOf="@+id/editText19" />
+
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+</FrameLayout>
