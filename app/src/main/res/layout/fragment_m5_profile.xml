@@ -57,7 +57,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="이홍인"
+                                android:text="프로필"
                                 android:textSize="24sp"
                                 android:textStyle="bold" />
 

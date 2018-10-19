@@ -10,7 +10,7 @@ public class ProfileFragment extends android.support.v4.app.Fragment implements 
 
     public String id_target;
     public String id_user;
-    public boolean isMyProfile;
+    public boolean isEditMode;
 
     ProfileHeaderFragment headerFragment;
     ProfilePrivateFragment privateFragment;
@@ -29,10 +29,7 @@ public class ProfileFragment extends android.support.v4.app.Fragment implements 
 
         id_user = this.getArguments().getString("id_user");
         id_target = this.getArguments().getString("id_target");
-        if(id_target.equals(id_user))
-            isMyProfile = true;
-        else
-            isMyProfile = false;
+        isEditMode = this.getArguments().getBoolean("isEditMode");
 
         return view;
     }
@@ -46,7 +43,7 @@ public class ProfileFragment extends android.support.v4.app.Fragment implements 
         tailFragment = new ProfileTailFragment();
 
         android.support.v4.app.FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
-        if (isMyProfile) {
+        if (isEditMode) {
             transaction.add(R.id.profileHeaderContainer, headerFragment);
             transaction.add(R.id.profileTailContainer, tailFragment);
         }
@@ -62,7 +59,7 @@ public class ProfileFragment extends android.support.v4.app.Fragment implements 
     public void onDestroyView() {
         super.onDestroyView();
 
-        isMyProfile = false;
+        isEditMode = false;
     }
 
 }

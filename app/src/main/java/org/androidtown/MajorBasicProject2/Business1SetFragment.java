@@ -62,7 +62,7 @@ public class Business1SetFragment extends Fragment {
             }
         }) ;
     }
-    public void setBusiness(String id_business){
+    public void setBusiness(final String id_business){
         HandlerDB download_business = new HandlerDB("select_business.php");
         HashMap<String,String>input = new HashMap<>();
         input.put("id_business", id_business);
@@ -71,9 +71,9 @@ public class Business1SetFragment extends Fragment {
             @Override
             public void onResepones(ArrayList<HashMap<String, String>> dbResult, String log) {
                 if(log.equals("json")) {
-
-                    writeBusiness(dbResult);
                     Toast.makeText(getActivity(), "환경정보를 불러왔습니다.", Toast.LENGTH_SHORT).show();
+                    ((RegisterActivity)getActivity()).id_business = id_business;
+                    writeBusiness(dbResult);
                 } else {
                     Toast.makeText(getActivity(), "환경정보를 불러오는 데 실패했습니다.", Toast.LENGTH_SHORT).show();
                 }

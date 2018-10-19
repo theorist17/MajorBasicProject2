@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener, TaskFragment.OnSendListener {
     public Fragment curFragment;
     Fragment[] fragments = {new RegisterFragment(), new Business1SetFragment(), new Business2NameFragment(), new Business3LocaFragment(), new Business4GPSFragment(), new Business5EnviFragment(), new Business6ServFragment(),
         new Quest1TaskFragment(),  new Quest2PhotoFragment(), new Quest3BodyFragment(), new Quest4TitleFragment(),
@@ -68,6 +68,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     //links
     public String id_business;
     public String id_recruit;
+
+    @Override
+    public void onSendData(ArrayList<String> selected) {
+        ((Quest1TaskFragment)curFragment).id_task_list = selected;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

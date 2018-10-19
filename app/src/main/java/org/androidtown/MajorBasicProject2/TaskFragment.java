@@ -46,12 +46,17 @@ public class TaskFragment extends Fragment implements View.OnClickListener{
     ArrayList<String> alSelectedList = new ArrayList<>();
     OnSendListener onSendDataListener;
 
+    public interface OnSendListener {
+        void onSendData(ArrayList<String> selected);
+    }
+
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
 
-        onSendDataListener = (OnSendListener) context;
+        //onSendDataListener = (OnSendListener) ((Quest1TaskFragment)((RegisterActivity) context).curFragment);
 
+        onSendDataListener = (OnSendListener) context;
     }
 
     @Nullable
@@ -213,7 +218,5 @@ public class TaskFragment extends Fragment implements View.OnClickListener{
         super.onDestroyView();
     }
 
-    public interface OnSendListener {
-        void onSendData(ArrayList<String> selected);
-    }
+
 }

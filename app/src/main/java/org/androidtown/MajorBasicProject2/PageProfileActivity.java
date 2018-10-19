@@ -28,6 +28,7 @@ public class PageProfileActivity extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("id_user", id_user);
         bundle.putString("id_target", id_target);
+        bundle.putBoolean("isEditMode", false);
 
         profileFragment = new ProfileFragment();
         profileFragment.setArguments(bundle);

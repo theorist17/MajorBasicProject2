@@ -16,7 +16,7 @@ import java.util.HashMap;
 
 import static android.app.Activity.RESULT_OK;
 
-public class Quest1TaskFragment extends Fragment implements View.OnClickListener, TaskFragment.OnSendListener {
+public class Quest1TaskFragment extends Fragment implements View.OnClickListener {
     final int FIELD = 1;
 
     EditText etField;
@@ -95,6 +95,8 @@ public class Quest1TaskFragment extends Fragment implements View.OnClickListener
     public void onDestroyView() {
         super.onDestroyView();
 
+        if(id_task_list == null)
+            return;
         ((RegisterActivity)getActivity()).id_task_list.clear();
         for(int i = 0; i< id_task_list.size(); i++)
             ((RegisterActivity)getActivity()).id_task_list.add(id_task_list.get(i).toString());
@@ -102,8 +104,5 @@ public class Quest1TaskFragment extends Fragment implements View.OnClickListener
         ((RegisterActivity)getActivity()).id_field = id_field;
     }
 
-    @Override
-    public void onSendData(ArrayList<String> selected) {
-        id_task_list = selected;
-    }
+
 }

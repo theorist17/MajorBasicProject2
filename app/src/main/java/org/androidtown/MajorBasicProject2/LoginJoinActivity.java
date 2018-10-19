@@ -54,11 +54,11 @@ public class LoginJoinActivity extends AppCompatActivity implements View.OnClick
                 @Override
                 public void onResepones(ArrayList<HashMap<String, String>> dbResult, String log) {
                     //error 반환
-                    if(log.substring(0, 7).equals("success")) {
+                    if(log.equals("success")) {
                         Toast.makeText(LoginJoinActivity.this, "성공적으로 가입되었습니다.", Toast.LENGTH_SHORT).show();
                         finish();
                     }
-                    else if(log.substring(0, 5).equals("error"))
+                    else
                         Toast.makeText(LoginJoinActivity.this, log, Toast.LENGTH_SHORT).show();
 
                 }

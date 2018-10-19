@@ -94,6 +94,7 @@ public class PageDateActivity extends AppCompatActivity implements View.OnClickL
             }
         });
     }
+
     public void clearDates(){
         //Following code is clear all selected dates while clicking on the button.
         calendar_view.clearHighlightedDates();

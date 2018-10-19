@@ -45,7 +45,7 @@ public class ProfilePrivateFragment extends android.support.v4.app.Fragment impl
 
         isModeSetting = false;
         parent = ((ProfileFragment)getParentFragment());
-        if(parent.isMyProfile)
+        if(parent.isEditMode)
             btnUserSet.setVisibility(View.VISIBLE);
 
         downloadPrivate();
@@ -124,7 +124,7 @@ public class ProfilePrivateFragment extends android.support.v4.app.Fragment impl
         HandlerDB upload_private = new HandlerDB("upload_private.php");
         HashMap<String, String> input = new HashMap<>();
         input.put("id_user", parent.id_target);
-        input.put("id", etUserId.getText().toString());
+        input.put("username", etUserId.getText().toString());
         input.put("cell", etUserCell.getText().toString());
         input.put("password", etUserPassword.getText().toString());
         input.put("birth", etUserBirth.getText().toString());

@@ -57,6 +57,7 @@ public class MainActivity extends FragmentActivity implements TaskFragment.OnSen
                     Bundle bundle = new Bundle();
                     bundle.putString("id_user", id_user);
                     bundle.putString("id_target", id_user);
+                    bundle.putBoolean("isEditMode", true);
                     profileFragment.setArguments(bundle);
                     transaction.replace(R.id.mainContainer, profileFragment).commit();
                 }

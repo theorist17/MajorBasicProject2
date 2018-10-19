@@ -63,6 +63,7 @@ public class MainSearchFragment extends Fragment implements OnMapReadyCallback, 
     TextView tv_marker;
     Marker selectedMarker;
     boolean isDownloadTrue = true;
+
     //layout
     Button btnList, btnFind;
     EditText etFind;
@@ -325,10 +326,10 @@ public class MainSearchFragment extends Fragment implements OnMapReadyCallback, 
         tv_marker.setText(formatted);
 
         if (isSelectedMarker) {
-            tv_marker.setBackgroundResource(R.drawable.ic_marker_phone_blue);
+            tv_marker.setBackgroundResource(R.drawable.ic_marker_phone_blue9);
             tv_marker.setTextColor(Color.WHITE);
         } else {
-            tv_marker.setBackgroundResource(R.drawable.ic_marker_phone);
+            tv_marker.setBackgroundResource(R.drawable.ic_marker_phone9);
             tv_marker.setTextColor(Color.BLACK);
         }
 
@@ -394,7 +395,7 @@ public class MainSearchFragment extends Fragment implements OnMapReadyCallback, 
         //지도
         index = viewFlipper.getDisplayedChild();
         isDownloadTrue = false;
-        //relocateMap(new LatLng(Double.valueOf(questList.get(index).get("latitude")).doubleValue(), Double.valueOf(questList.get(index).get("longitude"))));
+        //relocateMap(new LatLng(Double.valueOf(qeustClientList.get(index).get("latitude")).doubleValue(), Double.valueOf(qeustClientList.get(index).get("longitude"))));
         changeSelectedMarker(markerList.get(index));
         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(Double.valueOf(questList.get(index).get("latitude")).doubleValue(), Double.valueOf(questList.get(index).get("longitude"))));
         googleMap.animateCamera(center);
@@ -411,7 +412,7 @@ public class MainSearchFragment extends Fragment implements OnMapReadyCallback, 
         //지도
         index = viewFlipper.getDisplayedChild();
         isDownloadTrue = false;
-        //relocateMap(new LatLng(Double.valueOf(questList.get(index).get("latitude")).doubleValue(), Double.valueOf(questList.get(index).get("longitude"))));
+        //relocateMap(new LatLng(Double.valueOf(qeustClientList.get(index).get("latitude")).doubleValue(), Double.valueOf(qeustClientList.get(index).get("longitude"))));
         changeSelectedMarker(markerList.get(index));
         CameraUpdate center = CameraUpdateFactory.newLatLng(new LatLng(Double.valueOf(questList.get(index).get("latitude")).doubleValue(), Double.valueOf(questList.get(index).get("longitude"))));
         googleMap.animateCamera(center);
@@ -428,55 +429,61 @@ public class MainSearchFragment extends Fragment implements OnMapReadyCallback, 
         quest_near.setDbResponse(new HandlerDB.DBResponse() {
             @Override
             public void onResepones(ArrayList<HashMap<String, String>> dbResult, String log) {
-                if(!log.equals("json"))
+                if(log.equals("json")) {
+                    writeQuest(dbResult);
+                } else {
                     Toast.makeText(getActivity(), log, Toast.LENGTH_SHORT).show();
-
-                viewFlipper.removeAllViews();
-                questList.clear();
-                markerList.clear();
-                googleMap.clear();
-
-                LayoutInflater inflator = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                for (int i = 0; i< dbResult.size(); i++){
-                    // inflate child
-                    View item = inflator.inflate(R.layout.item_questbar, null);
-
-                    // initialize review UI
-                    TextView tvfield = item.findViewById(R.id.orderbar_item_field);
-                    TextView tvType = item.findViewById(R.id.orderbar_item_type);
-                    TextView tvValue = item.findViewById(R.id.orderbar_item_value);
-
-                    TextView tvTitle = item.findViewById(R.id.orderbar_item_title);
-                    LinearLayout llTaskLayout = item.findViewById(R.id.orderbar_item_task_layout);
-                    TextView tvPrice = item.findViewById(R.id.orderbar_item_price);
-
-                    TextView tvCell = item.findViewById(R.id.orderbar_item_cell);
-                    TextView tvAddress = item.findViewById(R.id.orderbar_item_address);
-
-                    // set inputData
-                    tvfield.setText(dbResult.get(i).get("field"));
-                    tvType.setText(dbResult.get(i).get("type"));
-                    //tvValue.setText(dbResult.get(i).get("type"));
-                    tvPrice.setText(dbResult.get(i).get("price"));
-                    tvCell.setText(dbResult.get(i).get("cell"));
-                    tvTitle.setText(dbResult.get(i).get("title"));
-                    tvAddress.setText(dbResult.get(i).get("address"));
-
-                    // add child
-                    viewFlipper.addView(item);
-                    HashMap<String, String> quest = new HashMap<String, String>();
-                    quest.put("index", i+"");
-                    quest.put("id_quest", dbResult.get(i).get("id_quest"));
-                    quest.put("latitude", dbResult.get(i).get("latitude"));
-                    quest.put("longitude", dbResult.get(i).get("longitude"));
-                    questList.add(quest);
-
-
-                    //add custom marker
-                    ItemMarker itemMarker = new ItemMarker(Double.valueOf(dbResult.get(i).get("latitude")),  Double.valueOf(dbResult.get(i).get("longitude")), Integer.valueOf(dbResult.get(i).get("price")), i);
-                    markerList.add(addMarker(itemMarker, false));
                 }
+
+
             }
         });
+    }
+    public void writeQuest(ArrayList<HashMap<String, String>> dbResult){
+        viewFlipper.removeAllViews();
+        questList.clear();
+        markerList.clear();
+        googleMap.clear();
+
+        LayoutInflater inflator = (LayoutInflater)getActivity().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        for (int i = 0; i< dbResult.size(); i++){
+            // inflate child
+            View item = inflator.inflate(R.layout.item_questbar, null);
+
+            // initialize review UI
+            TextView tvfield = item.findViewById(R.id.orderbar_item_field);
+            TextView tvType = item.findViewById(R.id.orderbar_item_type);
+            TextView tvValue = item.findViewById(R.id.orderbar_item_value);
+
+            TextView tvTitle = item.findViewById(R.id.orderbar_item_title);
+            LinearLayout llTaskLayout = item.findViewById(R.id.orderbar_item_task_layout);
+            TextView tvPrice = item.findViewById(R.id.orderbar_item_price);
+
+            TextView tvCell = item.findViewById(R.id.orderbar_item_cell);
+            TextView tvAddress = item.findViewById(R.id.orderbar_item_address);
+
+            // set inputData
+            tvfield.setText(dbResult.get(i).get("field"));
+            tvType.setText(dbResult.get(i).get("type"));
+            //tvValue.setText(dbResult.get(i).get("type"));
+            tvPrice.setText(dbResult.get(i).get("price"));
+            tvCell.setText(dbResult.get(i).get("cell"));
+            tvTitle.setText(dbResult.get(i).get("title"));
+            tvAddress.setText(dbResult.get(i).get("address"));
+
+            // add child
+            viewFlipper.addView(item);
+            HashMap<String, String> quest = new HashMap<String, String>();
+            quest.put("index", i+"");
+            quest.put("id_quest", dbResult.get(i).get("id_quest"));
+            quest.put("latitude", dbResult.get(i).get("latitude"));
+            quest.put("longitude", dbResult.get(i).get("longitude"));
+            questList.add(quest);
+
+
+            //add custom marker
+            ItemMarker itemMarker = new ItemMarker(Double.valueOf(dbResult.get(i).get("latitude")),  Double.valueOf(dbResult.get(i).get("longitude")), Integer.valueOf(dbResult.get(i).get("price")), i);
+            markerList.add(addMarker(itemMarker, false));
+        }
     }
 }

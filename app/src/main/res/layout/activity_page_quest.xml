@@ -36,8 +36,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageView
-                        android:id="@+id/myImageView"
+                    <ViewFlipper
+                        android:id="@+id/vfQuestImage"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:minHeight="200dp" />
@@ -45,10 +45,10 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_alignBottom="@id/myImageView"
-                        android:layout_alignLeft="@id/myImageView"
-                        android:layout_alignRight="@id/myImageView"
-                        android:layout_alignTop="@id/myImageView"
+                        android:layout_alignBottom="@id/vfQuestImage"
+                        android:layout_alignLeft="@id/vfQuestImage"
+                        android:layout_alignRight="@id/vfQuestImage"
+                        android:layout_alignTop="@id/vfQuestImage"
                         android:orientation="horizontal"
                         android:paddingTop="15dp">
 
@@ -63,9 +63,13 @@
                             android:textStyle="bold" />
 
                         <TextView
+                            android:id="@+id/pageQuestCation"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1" />
+                            android:layout_margin="5dp"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
 
                         <Button
                             android:id="@+id/pageQuestLike"
@@ -76,16 +80,17 @@
                             android:textScaleX="1.1"
                             android:textSize="20sp"
                             android:textStyle="bold" />
+
                     </LinearLayout>
                 </RelativeLayout>
 
                 <TextView
-                    android:id="@+id/pageQuestCation"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/pageQuestTitle"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="ASDIFJOSDOIFJSDOFJOISDFIJOSDIJFOISDJFIODS"
                     android:textSize="30sp"
+                    android:text="의뢰 제목"
                     android:textStyle="bold" />
 
                 <LinearLayout
@@ -96,19 +101,19 @@
                     <Button
                         android:id="@+id/btnClient"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="70dp"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@null"
                         android:paddingLeft="20dp"
                         android:paddingRight="20dp"
-                        android:text="클라이언트 님을 만나보세요"
-                        android:textAlignment="textStart"
+                        android:text="클라이언트를 만나보세요"
+                        android:gravity="top"
                         android:textSize="17sp" />
 
                     <de.hdodenhof.circleimageview.CircleImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/ivUserCover"
+                        android:id="@+id/ivClientCover"
                         android:layout_width="70dp"
                         android:layout_height="70dp"
                         android:src="@drawable/kakao_default_profile_image"
@@ -121,7 +126,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="자기소개를 합니다. ASDI FOASI FJOAE FJOA ISDJFO IASJDOIF J OISDJF OIASJD IOF JOIAS DJFIOA SJDO FOISADIOOI JOAD FIOASD IOFJIOA D JIOFJ  ASOIDJFIOASJ DIOFJA OSID FO IASDOIF"
+                    android:text="자기소개를 합니다."
                     android:textSize="17sp" />
 
                 <View
@@ -135,111 +140,128 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:minWidth="30dp" />
-
-                    <View
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_capacity"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:minWidth="30dp"
+                            android:src="@drawable/ic_people_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/tv_capacity"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="인원" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:minWidth="30dp" />
-
-                    <View
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_field"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:minWidth="30dp"
+                            android:src="@drawable/ic_star_rate_black_18dp" />
+
+                        <TextView
+                            android:id="@+id/tv_field"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="분야" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:minWidth="30dp" />
-
-                    <View
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/iv_type"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:minWidth="30dp"
+                            android:src="@drawable/ic_subject_black_24dp" />
+
+                        <TextView
+                            android:id="@+id/tv_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="유형" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:minWidth="30dp" />
-
-                    <View
+                    <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:orientation="horizontal">
+                        <ImageView
+                            android:id="@+id/iv_place"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:minWidth="30dp"
+                            android:src="@drawable/ic_location_city_black_24dp" />
 
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        <TextView
+                            android:id="@+id/tv_space"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="장소"
+                            android:layout_gravity="center_horizontal" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="인원" />
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="분야" />
+                    </LinearLayout>
 
                     <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="유형" />
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="장소" />
-
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
                 </LinearLayout>
 
@@ -295,7 +317,7 @@
                     android:textSize="17sp" />
 
                 <TextView
-                    android:id="@+id/pageQuestText"
+                    android:id="@+id/tvBody"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -323,6 +345,7 @@
                     android:layout_height="wrap_content">
 
                     <LinearLayout
+                        android:id="@+id/llTaskView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="horizontal">
@@ -340,6 +363,7 @@
                     android:background="@color/common_google_signin_btn_text_light_disabled" />
 
                 <LinearLayout
+                    android:id="@+id/llSupply"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:orientation="horizontal">
@@ -353,7 +377,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:minWidth="30dp" />
+                        android:minWidth="30dp"
+                        android:src="@drawable/ic_security" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -364,7 +389,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:minWidth="30dp" />
+                        android:minWidth="30dp"
+                        android:src="@drawable/ic_toilet" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -375,7 +401,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:minWidth="30dp" />
+                        android:minWidth="30dp"
+                        android:src="@drawable/ic_wifi" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -386,7 +413,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:minWidth="30dp" />
+                        android:minWidth="30dp"
+                        android:src="@drawable/ic_break_lun_din" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -397,7 +425,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:minWidth="30dp" />
+                        android:minWidth="30dp"
+                        android:src="@drawable/ic_laptop" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -408,7 +437,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:minWidth="30dp" />
+                        android:minWidth="30dp"
+                        android:src="@drawable/ic_more_horiz_black_24dp" />
 
                     <View
                         android:layout_width="wrap_content"
@@ -441,127 +471,123 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="30dp"
+                    android:layout_height="wrap_content"
                     android:orientation="horizontal">
 
                     <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:id="@+id/iv_trasport"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:minWidth="30dp" />
-
-                    <View
-                        android:id="@+id/vw_trasport"
+                    <LinearLayout
+                        android:id="@+id/llTransport"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:minWidth="30dp"
+                            android:src="@drawable/ic_transport" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="교통편 제공" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:id="@+id/iv_subway"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:minWidth="30dp" />
-
-                    <View
-                        android:id="@+id/vw_subway"
+                    <LinearLayout
+                        android:id="@+id/llSubway"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:minWidth="30dp"
+                            android:src="@drawable/ic_subway" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="인근 지하철" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:id="@+id/iv_bus_stop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:minWidth="30dp" />
-
-                    <View
-                        android:id="@+id/vw_bus_stop"
+                    <LinearLayout
+                        android:id="@+id/llBusStop"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:minWidth="30dp"
+                            android:src="@drawable/ic_bus_stop" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="버스 정류장" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
 
-                    <ImageView
-                        android:id="@+id/iv_parking_lot"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:minWidth="30dp" />
-
-                    <View
-                        android:id="@+id/vw_parking_lot"
+                    <LinearLayout
+                        android:id="@+id/llParkingLot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-                </LinearLayout>
+                        android:orientation="vertical">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:orientation="horizontal">
+                        <ImageView
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:minWidth="30dp"
+                            android:src="@drawable/ic_parking_lot" />
 
-                    <View
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center"
+                            android:text="무료 주차장" />
 
-                    <TextView
-                        android:id="@+id/tv_trasport"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="교통편 제공" />
-
-                    <View
-                        android:id="@+id/v_trasport"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:id="@+id/tv_subway"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="지하철" />
+                    </LinearLayout>
 
                     <View
-                        android:id="@+id/v_subway"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:id="@+id/tv_bus_stop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="버스정류장" />
-
-                    <View
-                        android:id="@+id/v_bus_stop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:id="@+id/tv_parking_lot"
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:text="무료 주차장" />
-
-                    <View
-                        android:id="@+id/v_parking_lot"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="0dp"
+                        android:layout_height="10dp"
                         android:layout_weight="1" />
                 </LinearLayout>
 
@@ -585,32 +611,42 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
-                    <ImageView
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/ivCommentCover"
                         android:layout_width="70dp"
-                        android:layout_height="70dp" />
+                        android:layout_height="70dp"
+                        android:src="@drawable/kakao_default_profile_image"
+                        app:civ_border_width="2dp"
+                        app:civ_border_color="@color/sanga5"/>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <TextView
+                            android:id="@+id/tvCommentName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_marginTop="20dp"
-                            android:id="@+id/tvFirstCommentedName"
-                            android:text="D'Ana"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:text="평가인" />
+
                         <TextView
-                            android:id="@+id/tvFirstCommentedDate"
-                            android:text="2017-12-11"
+                            android:id="@+id/tvCommentDate"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:text="평가일" />
                     </LinearLayout>
                 </LinearLayout>
+
                 <TextView
-                    android:id="@+id/tvFisrtComment"
+                    android:id="@+id/tvComment"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="ASDIJ DSOJF OISD FI SDJ FIO SDIF JSD DOIF OISDJFSDFJDS IOJOISDDJ IF OSDJ F"
+                    android:text="코멘트"
                     android:textSize="15sp" />
 
                 <View
@@ -633,15 +669,15 @@
                         android:layout_margin="5dp"
                         android:background="@null"
                         android:gravity="left"
-                        android:text="총 145개의 후기 모두 보기"
+                        android:text="총 ~개의 후기 모두 보기"
                         android:layout_weight="1"
                         android:textSize="17sp" />
                     <TextView
-                        android:id="@+id/tvComment"
+                        android:id="@+id/tvRate"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
-                        android:text="4.5"
+                        android:text="평점"
                         android:textSize="17sp" />
                 </LinearLayout>
 
@@ -654,15 +690,33 @@
                     android:layout_marginTop="20dp"
                     android:background="@color/common_google_signin_btn_text_light_disabled" />
 
-                <Button
-                    android:id="@+id/btnBonus"
+
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:background="@null"
-                    android:gravity="left"
-                    android:text="추가 수당"
-                    android:textSize="17sp" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="추가 수당"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:id="@+id/tvBonus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="금액"
+                        android:textSize="17sp" />
+
+                </LinearLayout>
 
                 <View
                     android:layout_width="match_parent"
@@ -728,7 +782,7 @@
                     android:layout_margin="5dp"
                     android:background="@null"
                     android:gravity="left"
-                    android:text="추가 수당"
+                    android:text="신고하기"
                     android:textSize="17sp" />
 
                 <TextView
@@ -767,75 +821,83 @@
         </LinearLayout>
 
     </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
-        android:orientation="horizontal"
-        android:background="@color/sanga1">
+        android:background="@color/sanga1"
+        android:orientation="horizontal">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="15dp"
-            android:paddingTop="9dp"
+            android:background="@null"
             android:orientation="vertical"
-            android:background="@null">
+            android:paddingTop="9dp">
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@null">
+                android:background="@null"
+                android:orientation="horizontal">
+
                 <TextView
                     android:id="@+id/tvBottomPrice"
-                    android:text="14000"
-                    android:textStyle="bold"
-                    android:textSize="20sp"
-                    android:background="@null"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="가격"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tvBottomUnit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@null"
-                    android:text="/하루"
+                    android:text=" / 단위"
                     android:textSize="15sp"
                     android:textStyle="bold" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@null">
+                android:background="@null"
+                android:orientation="horizontal">
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
+
                 <TextView
-                    android:id="@+id/tvBottomRating"
-                    android:text="4.5"
-                    android:textStyle="bold"
-                    android:textSize="15sp"
-                    android:background="@null"
+                    android:id="@+id/tvBottomRate"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:text="평점"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
+
         <TextView
-            android:background="@null"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@null" />
 
         <Button
+            android:id="@+id/btnCheck"
             android:layout_width="160dp"
             android:layout_height="30dp"
-            android:layout_marginRight="15dp"
-            android:text="모집 가능 여부 확인하기"
-            android:textColor="#ffffff"
             android:layout_gravity="center_vertical"
-            android:background="@xml/mybutton" />
+            android:layout_marginRight="15dp"
+            android:background="@xml/mybutton"
+            android:text="모집 가능 여부 확인하기"
+            android:textColor="#ffffff" />
     </LinearLayout>
 </RelativeLayout>

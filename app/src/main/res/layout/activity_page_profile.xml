@@ -6,10 +6,16 @@
     android:layout_height="match_parent"
     tools:context="org.androidtown.MajorBasicProject2.PageProfileActivity">
 
-    <FrameLayout
-        android:id="@+id/pageProfileContainer"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/pageProfileContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+    </ScrollView>
 
 </RelativeLayout>
